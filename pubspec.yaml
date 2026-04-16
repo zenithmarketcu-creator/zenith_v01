@@ -1,0 +1,59 @@
+name: zenith
+description: zenith - cuba_marketplace app built with Flutter & Supabase
+
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # Supabase (replaces Node.js + MongoDB + Cloudinary)
+  supabase_flutter: ^2.3.4
+
+  # State Management
+  flutter_bloc: ^9.1.1
+  hydrated_bloc: ^11.0.0
+  equatable: ^2.0.5
+
+  # Navigation
+  go_router: ^17.2.1
+
+  # Image picking & display
+  image_picker: ^1.0.7
+  cached_network_image: ^3.3.1
+
+  # Utils
+  shared_preferences: ^2.2.2
+  path_provider: ^2.1.2
+  uuid: ^4.3.3
+  intl: ^0.20.2
+
+  # Charts (admin earnings)
+  syncfusion_flutter_charts: ^33.1.49
+
+  # Google Pay
+  pay: ^3.3.0
+
+  # Icons & UI
+  cupertino_icons: ^1.0.6
+  flutter_rating_bar: ^4.0.1
+  carousel_slider: ^5.1.2
+  badges: ^3.1.2
+  shimmer: ^3.0.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+  build_runner: ^2.4.8
+  change_app_package_name: ^1.5.0
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/images/
+    - assets/icons/
