@@ -34,7 +34,7 @@ class AppConstants {
 
   // ─── Google Pay config ─────────────────────────────────────
   static const String googlePayMerchantId = 'YOUR_MERCHANT_ID';
-  static const String googlePayMerchantName = 'Flutterzon';
+  static const String googlePayMerchantName = 'Zenith Store';
 
   // ─── App colors ─────────────────────────────────────────────
   static const int primaryColorValue = 0xFFFF9800; // Amazon orange

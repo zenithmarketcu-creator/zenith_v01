@@ -59,7 +59,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
               children: [
                 const SizedBox(height: 40),
                 const Text(
-                  'flutterzon',
+                  'Zenith',
                   textAlign: TextAlign.center,
                   style: TextStyle(
                     fontSize: 34,

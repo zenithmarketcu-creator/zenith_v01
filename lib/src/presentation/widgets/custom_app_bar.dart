@@ -1,10 +1,10 @@
 // lib/src/presentation/widgets/custom_app_bar.dart
 import 'package:flutter/material.dart';
 
-class FlutterzonAppBar extends StatelessWidget implements PreferredSizeWidget {
+class ZenithAppBar extends StatelessWidget implements PreferredSizeWidget {
   final String title;
   final List<Widget>? actions;
-  const FlutterzonAppBar({super.key, required this.title, this.actions});
+  const ZenithAppBar({super.key, required this.title, this.actions});
 
   @override
   Widget build(BuildContext context) {

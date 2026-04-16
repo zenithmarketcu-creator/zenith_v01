@@ -52,7 +52,8 @@ class _SignInScreenState extends State<SignInScreen> {
             }
           } else if (state is AuthError) {
             ScaffoldMessenger.of(context).showSnackBar(
-              SnackBar(content: Text(state.message), backgroundColor: Colors.red),
+              SnackBar(
+                  content: Text(state.message), backgroundColor: Colors.red),
             );
           }
         },
@@ -65,7 +66,7 @@ class _SignInScreenState extends State<SignInScreen> {
                 const SizedBox(height: 40),
                 // Logo
                 const Text(
-                  'flutterzon',
+                  'Zenith',
                   textAlign: TextAlign.center,
                   style: TextStyle(
                     fontSize: 34,
@@ -94,8 +95,9 @@ class _SignInScreenState extends State<SignInScreen> {
                         controller: _emailCtrl,
                         keyboardType: TextInputType.emailAddress,
                         decoration: _inputDecoration('Email'),
-                        validator: (v) =>
-                            v == null || !v.contains('@') ? 'Enter valid email' : null,
+                        validator: (v) => v == null || !v.contains('@')
+                            ? 'Enter valid email'
+                            : null,
                       ),
                       const SizedBox(height: 16),
                       TextFormField(
@@ -103,13 +105,16 @@ class _SignInScreenState extends State<SignInScreen> {
                         obscureText: _obscure,
                         decoration: _inputDecoration('Password').copyWith(
                           suffixIcon: IconButton(
-                            icon: Icon(
-                                _obscure ? Icons.visibility_off : Icons.visibility),
-                            onPressed: () => setState(() => _obscure = !_obscure),
+                            icon: Icon(_obscure
+                                ? Icons.visibility_off
+                                : Icons.visibility),
+                            onPressed: () =>
+                                setState(() => _obscure = !_obscure),
                           ),
                         ),
-                        validator: (v) =>
-                            v == null || v.length < 6 ? 'Min 6 characters' : null,
+                        validator: (v) => v == null || v.length < 6
+                            ? 'Min 6 characters'
+                            : null,
                       ),
                     ],
                   ),
@@ -118,8 +123,7 @@ class _SignInScreenState extends State<SignInScreen> {
                 BlocBuilder<AuthBloc, AuthState>(
                   builder: (context, state) {
                     if (state is AuthLoading) {
-                      return const Center(
-                          child: CircularProgressIndicator());
+                      return const Center(child: CircularProgressIndicator());
                     }
                     return ElevatedButton(
                       onPressed: _submit,
